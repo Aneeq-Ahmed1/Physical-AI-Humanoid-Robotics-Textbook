@@ -1,0 +1,23 @@
+# Git Ignore for Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# Git Ignore for Node.js (Docusaurus)
+node_modules/
+.docusaurus/
+build/
+*.log
+.env*
+
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+nul
