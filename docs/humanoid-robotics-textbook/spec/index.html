@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-humanoid-robotics-textbook/spec" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Textbook Specification | Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://aneeq-ahmed1.github.io/Physical-AI-Humanoid-Robotics-Textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://aneeq-ahmed1.github.io/Physical-AI-Humanoid-Robotics-Textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://aneeq-ahmed1.github.io/Physical-AI-Humanoid-Robotics-Textbook/docs/humanoid-robotics-textbook/spec"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Textbook Specification | Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Feature Branch: physical-ai-humanoid-robotics-textbook-project"><meta data-rh="true" property="og:description" content="Feature Branch: physical-ai-humanoid-robotics-textbook-project"><link data-rh="true" rel="icon" href="/Physical-AI-Humanoid-Robotics-Textbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://aneeq-ahmed1.github.io/Physical-AI-Humanoid-Robotics-Textbook/docs/humanoid-robotics-textbook/spec"><link data-rh="true" rel="alternate" href="https://aneeq-ahmed1.github.io/Physical-AI-Humanoid-Robotics-Textbook/docs/humanoid-robotics-textbook/spec" hreflang="en"><link data-rh="true" rel="alternate" href="https://aneeq-ahmed1.github.io/Physical-AI-Humanoid-Robotics-Textbook/docs/humanoid-robotics-textbook/spec" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Physical-AI-Humanoid-Robotics-Textbook/blog/rss.xml" title="Humanoid Robotics Textbook RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Physical-AI-Humanoid-Robotics-Textbook/blog/atom.xml" title="Humanoid Robotics Textbook Atom Feed"><link rel="stylesheet" href="/Physical-AI-Humanoid-Robotics-Textbook/assets/css/styles.95941f4a.css">
+<script src="/Physical-AI-Humanoid-Robotics-Textbook/assets/js/runtime~main.3dee6887.js" defer="defer"></script>
+<script src="/Physical-AI-Humanoid-Robotics-Textbook/assets/js/main.23eefa03.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Physical-AI-Humanoid-Robotics-Textbook/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Physical-AI-Humanoid-Robotics-Textbook/"><div class="navbar__logo"><img src="/Physical-AI-Humanoid-Robotics-Textbook/img/logo.svg" alt="Humanoid Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Physical-AI-Humanoid-Robotics-Textbook/img/logo.svg" alt="Humanoid Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Humanoid Robotics Textbook</b></a><a class="navbar__item navbar__link" href="/Physical-AI-Humanoid-Robotics-Textbook/docs/intro">Textbook</a><a class="navbar__item navbar__link" href="/Physical-AI-Humanoid-Robotics-Textbook/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/aneeq-ai/Humanoid-Robotics-Textbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Feature Specification: Physical AI &amp; Humanoid Robotics Textbook Project</h1></header>
+<p><strong>Feature Branch</strong>: <code>physical-ai-humanoid-robotics-textbook-project</code>
+<strong>Created</strong>: 2025-12-05
+<strong>Status</strong>: Draft
+<strong>Input</strong>: User description: &quot;/sp.specify Physical AI &amp; Humanoid Robotics Textbook Project</p>
+<p>Project Overview:
+Create an AI-native textbook on &quot;Physical AI &amp; Humanoid Robotics&quot; for students and professionals learning embodied AI. The book should integrate ROS 2, Gazebo, NVIDIA Isaac, Unity, and LLM-powered robotics (VLA), emphasizing hands-on projects and capstone development.</p>
+<p>Target Audience:</p>
+<ul>
+<li class="">Graduate students, AI &amp; robotics engineers</li>
+<li class="">Educators in robotics or AI programs</li>
+<li class="">Technically proficient learners with Python and robotics background</li>
+</ul>
+<p>Learning Goals:</p>
+<ul>
+<li class="">Master ROS 2 architecture, nodes, topics, and services</li>
+<li class="">Simulate humanoid robots using Gazebo &amp; Unity</li>
+<li class="">Develop perception, navigation, and manipulation pipelines in NVIDIA Isaac</li>
+<li class="">Integrate LLMs for voice-command and task planning</li>
+<li class="">Understand embodied AI principles and human-robot interaction</li>
+<li class="">Build a fully autonomous simulated humanoid as a capstone</li>
+</ul>
+<p>Modules:</p>
+<ol>
+<li class="">Robotic Nervous System (ROS 2)</li>
+<li class="">Digital Twin Simulation (Gazebo &amp; Unity)</li>
+<li class="">AI-Robot Brain (NVIDIA Isaac)</li>
+<li class="">Vision-Language-Action (LLM + Whisper integration)</li>
+</ol>
+<p>Technical Standards:</p>
+<ul>
+<li class="">Accurate simulation with physics &amp; sensor fidelity</li>
+<li class="">Realistic perception and navigation pipelines</li>
+<li class="">Hardware-software co-design for edge deployment (Jetson Orin)</li>
+<li class="">Code &amp; examples reproducible on local or cloud workstations</li>
+</ul>
+<p>Research &amp; Development Workflow:</p>
+<ul>
+<li class="">Iterative, hypothesis-driven development</li>
+<li class="">Peer-reviewed references for all AI techniques</li>
+<li class="">Knowledge transfer and documentation embedded in textbook</li>
+<li class="">Continuous integration of simulation, real-world testing, and feedback</li>
+</ul>
+<p>Success Criteria:</p>
+<ul>
+<li class="">Each module conta &quot;</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scenarios--testing-mandatory">User Scenarios &amp; Testing <em>(mandatory)</em><a href="#user-scenarios--testing-mandatory" class="hash-link" aria-label="Direct link to user-scenarios--testing-mandatory" title="Direct link to user-scenarios--testing-mandatory" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-1---master-ros-2-architecture-priority-p1">Module 1 - Master ROS 2 Architecture (Priority: P1)<a href="#module-1---master-ros-2-architecture-priority-p1" class="hash-link" aria-label="Direct link to Module 1 - Master ROS 2 Architecture (Priority: P1)" title="Direct link to Module 1 - Master ROS 2 Architecture (Priority: P1)" translate="no">​</a></h3>
+<p>Learn and master the fundamental concepts of ROS 2, including nodes, topics, and services, essential for building robot control systems.</p>
+<p><strong>Why this priority</strong>: ROS 2 is foundational for all subsequent robotics development in the book.</p>
+<p><strong>Independent Test</strong>: User can successfully implement and run basic ROS 2 publisher-subscriber examples and service calls.</p>
+<p><strong>Acceptance Scenarios</strong>:</p>
+<ol>
+<li class=""><strong>Given</strong> a ROS 2 environment is set up, <strong>When</strong> the user follows the tutorial for creating a publisher node, <strong>Then</strong> the publisher node successfully broadcasts messages.</li>
+<li class=""><strong>Given</strong> a ROS 2 environment is set up, <strong>When</strong> the user follows the tutorial for creating a subscriber node, <strong>Then</strong> the subscriber node successfully receives messages from the publisher.</li>
+<li class=""><strong>Given</strong> a ROS 2 environment is set up, <strong>When</strong> the user implements a simple ROS 2 service client and server, <strong>Then</strong> the client successfully calls the service and receives a response.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-2---simulate-humanoid-robots-priority-p1">Module 2 - Simulate Humanoid Robots (Priority: P1)<a href="#module-2---simulate-humanoid-robots-priority-p1" class="hash-link" aria-label="Direct link to Module 2 - Simulate Humanoid Robots (Priority: P1)" title="Direct link to Module 2 - Simulate Humanoid Robots (Priority: P1)" translate="no">​</a></h3>
+<p>Gain proficiency in using Gazebo and Unity to create and simulate humanoid robot models, understanding physics, sensors, and environment interactions.</p>
+<p><strong>Why this priority</strong>: Simulation is a critical tool for developing and testing robotics applications without real hardware.</p>
+<p><strong>Independent Test</strong>: User can load a humanoid robot model into Gazebo/Unity and observe its behavior under simulated physics.</p>
+<p><strong>Acceptance Scenarios</strong>:</p>
+<ol>
+<li class=""><strong>Given</strong> Gazebo/Unity is installed, <strong>When</strong> the user loads a provided humanoid robot model, <strong>Then</strong> the robot model appears correctly in the simulation environment.</li>
+<li class=""><strong>Given</strong> a humanoid robot model is loaded, <strong>When</strong> the user applies simulated forces or commands, <strong>Then</strong> the robot&#x27;s joints move realistically according to physics.</li>
+<li class=""><strong>Given</strong> a humanoid robot model is loaded, <strong>When</strong> the user configures simulated sensors (e.g., camera, lidar), <strong>Then</strong> sensor data is accurately generated and accessible.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-3---develop-ai-robot-brain-in-nvidia-isaac-priority-p2">Module 3 - Develop AI-Robot Brain in NVIDIA Isaac (Priority: P2)<a href="#module-3---develop-ai-robot-brain-in-nvidia-isaac-priority-p2" class="hash-link" aria-label="Direct link to Module 3 - Develop AI-Robot Brain in NVIDIA Isaac (Priority: P2)" title="Direct link to Module 3 - Develop AI-Robot Brain in NVIDIA Isaac (Priority: P2)" translate="no">​</a></h3>
+<p>Learn to develop perception, navigation, and manipulation pipelines for humanoid robots using the NVIDIA Isaac platform, focusing on AI capabilities.</p>
+<p><strong>Why this priority</strong>: NVIDIA Isaac provides advanced tools for AI-driven robotics, essential for building intelligent humanoid behaviors.</p>
+<p><strong>Independent Test</strong>: User can implement a basic perception pipeline in Isaac that detects objects in a simulated environment.</p>
+<p><strong>Acceptance Scenarios</strong>:</p>
+<ol>
+<li class=""><strong>Given</strong> NVIDIA Isaac environment is set up with a simulated robot, <strong>When</strong> the user implements an object detection pipeline, <strong>Then</strong> the pipeline correctly identifies and localizes objects in the simulated scene.</li>
+<li class=""><strong>Given</strong> an object detection pipeline, <strong>When</strong> the user integrates a navigation algorithm, <strong>Then</strong> the robot can autonomously navigate to a target location while avoiding obstacles.</li>
+<li class=""><strong>Given</strong> a navigation pipeline, <strong>When</strong> the user implements a manipulation task (e.g., pick-and-place), <strong>Then</strong> the robot successfully grasps and moves an object.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-4---integrate-llms-for-vla-priority-p2">Module 4 - Integrate LLMs for VLA (Priority: P2)<a href="#module-4---integrate-llms-for-vla-priority-p2" class="hash-link" aria-label="Direct link to Module 4 - Integrate LLMs for VLA (Priority: P2)" title="Direct link to Module 4 - Integrate LLMs for VLA (Priority: P2)" translate="no">​</a></h3>
+<p>Understand how to integrate Large Language Models (LLMs) with robotics for voice-command interfaces and advanced task planning, enabling Vision-Language-Action (VLA) capabilities.</p>
+<p><strong>Why this priority</strong>: LLM integration represents a cutting-edge approach to human-robot interaction and complex task execution.</p>
+<p><strong>Independent Test</strong>: User can issue a voice command to a simulated robot and observe the robot interpreting and executing a simple task.</p>
+<p><strong>Acceptance Scenarios</strong>:</p>
+<ol>
+<li class=""><strong>Given</strong> an LLM and Whisper integration with a simulated robot, <strong>When</strong> the user issues a voice command (e.g., &quot;pick up the red cube&quot;), <strong>Then</strong> the system correctly transcribes the command and the LLM generates a relevant action plan.</li>
+<li class=""><strong>Given</strong> an action plan, <strong>When</strong> the robot executes the plan using its manipulation capabilities, <strong>Then</strong> the robot performs the desired action (e.g., picking up the red cube).</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-5---build-autonomous-simulated-humanoid-priority-p3">Module 5 - Build Autonomous Simulated Humanoid (Priority: P3)<a href="#module-5---build-autonomous-simulated-humanoid-priority-p3" class="hash-link" aria-label="Direct link to Module 5 - Build Autonomous Simulated Humanoid (Priority: P3)" title="Direct link to Module 5 - Build Autonomous Simulated Humanoid (Priority: P3)" translate="no">​</a></h3>
+<p>Apply knowledge from all modules to develop a fully autonomous simulated humanoid robot as a capstone project, demonstrating integrated intelligence.</p>
+<p><strong>Why this priority</strong>: The capstone project allows for synthesis of all learned concepts into a complete system.</p>
+<p><strong>Independent Test</strong>: The simulated humanoid can autonomously perform a complex multi-step task based on high-level goals.</p>
+<p><strong>Acceptance Scenarios</strong>:</p>
+<ol>
+<li class=""><strong>Given</strong> all previous modules are completed, <strong>When</strong> the user integrates all components into a simulated humanoid, <strong>Then</strong> the humanoid demonstrates autonomous behavior based on a defined set of high-level goals.</li>
+<li class=""><strong>Given</strong> autonomous operation, <strong>When</strong> the user introduces unforeseen environmental changes, <strong>Then</strong> the humanoid adapts its behavior to successfully complete its task.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="edge-cases">Edge Cases<a href="#edge-cases" class="hash-link" aria-label="Direct link to Edge Cases" title="Direct link to Edge Cases" translate="no">​</a></h3>
+<ul>
+<li class="">What happens when sensor data is noisy or incomplete?</li>
+<li class="">How does the system handle communication failures between ROS 2 nodes?</li>
+<li class="">What are the limitations of physics simulation fidelity in Gazebo/Unity?</li>
+<li class="">How does the LLM handle ambiguous or out-of-domain voice commands?</li>
+<li class="">What happens when a manipulation task fails due to an unexpected object configuration?</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-mandatory">Requirements <em>(mandatory)</em><a href="#requirements-mandatory" class="hash-link" aria-label="Direct link to requirements-mandatory" title="Direct link to requirements-mandatory" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="functional-requirements">Functional Requirements<a href="#functional-requirements" class="hash-link" aria-label="Direct link to Functional Requirements" title="Direct link to Functional Requirements" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>FR-001</strong>: The textbook MUST cover ROS 2 architecture, nodes, topics, and services.</li>
+<li class=""><strong>FR-002</strong>: The textbook MUST provide guidance on simulating humanoid robots using Gazebo.</li>
+<li class=""><strong>FR-003</strong>: The textbook MUST provide guidance on simulating humanoid robots using Unity.</li>
+<li class=""><strong>FR-004</strong>: The textbook MUST cover development of perception pipelines in NVIDIA Isaac.</li>
+<li class=""><strong>FR-005</strong>: The textbook MUST cover development of navigation pipelines in NVIDIA Isaac.</li>
+<li class=""><strong>FR-006</strong>: The textbook MUST cover development of manipulation pipelines in NVIDIA Isaac.</li>
+<li class=""><strong>FR-007</strong>: The textbook MUST explain the integration of LLMs for voice-command functionality in robotics.</li>
+<li class=""><strong>FR-008</strong>: The textbook MUST explain the integration of LLMs for task planning in robotics.</li>
+<li class=""><strong>FR-009</strong>: The textbook MUST include content on embodied AI principles.</li>
+<li class=""><strong>FR-010</strong>: The textbook MUST include content on human-robot interaction.</li>
+<li class=""><strong>FR-011</strong>: The textbook MUST include hands-on projects and a capstone development guide for building an autonomous simulated humanoid.</li>
+<li class=""><strong>FR-012</strong>: The textbook MUST ensure accurate simulation examples with physics and sensor fidelity.</li>
+<li class=""><strong>FR-013</strong>: The textbook MUST provide examples of realistic perception and navigation pipelines.</li>
+<li class=""><strong>FR-014</strong>: The textbook MUST discuss hardware-software co-design for edge deployment (e.g., Jetson Orin).</li>
+<li class=""><strong>FR-015</strong>: The textbook&#x27;s code examples and exercises MUST be reproducible on local or cloud workstations.</li>
+<li class=""><strong>FR-016</strong>: The textbook MUST adhere to an iterative, hypothesis-driven research and development workflow in its content presentation.</li>
+<li class=""><strong>FR-017</strong>: All AI techniques and claims presented in the textbook MUST be supported by peer-reviewed references.</li>
+<li class=""><strong>FR-018</strong>: Knowledge transfer and documentation MUST be embedded within the textbook content.</li>
+<li class=""><strong>FR-019</strong>: The textbook MUST incorporate continuous integration principles for simulation, real-world testing, and feedback loops in its examples.</li>
+<li class=""><strong>FR-020</strong>: The textbook MUST include specific guidance on handling security vulnerabilities and ethical challenges in implementations.</li>
+<li class=""><strong>FR-021</strong>: The textbook MUST include specific examples and case studies to illustrate ethical dilemmas and safety protocols.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="clarifications">Clarifications<a href="#clarifications" class="hash-link" aria-label="Direct link to Clarifications" title="Direct link to Clarifications" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="session-2025-12-05">Session 2025-12-05<a href="#session-2025-12-05" class="hash-link" aria-label="Direct link to Session 2025-12-05" title="Direct link to Session 2025-12-05" translate="no">​</a></h3>
+<ul>
+<li class="">Q: Should the textbook provide specific guidance on handling security vulnerabilities and ethical challenges in implementations, beyond conceptual discussions? → A: Yes, include specific guidance on handling security vulnerabilities and ethical challenges in implementations.</li>
+<li class="">Q: Should the textbook include specific examples and case studies to illustrate ethical dilemmas and safety protocols? → A: Yes, include specific examples and case studies to illustrate ethical dilemmas and safety protocols.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-entities-include-if-feature-involves-data">Key Entities <em>(include if feature involves data)</em><a href="#key-entities-include-if-feature-involves-data" class="hash-link" aria-label="Direct link to key-entities-include-if-feature-involves-data" title="Direct link to key-entities-include-if-feature-involves-data" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Robot Model</strong>: Representation of a physical humanoid robot in simulation.</li>
+<li class=""><strong>ROS 2 Node</strong>: Independent executable processing unit in ROS 2.</li>
+<li class=""><strong>Simulation Environment</strong>: Gazebo, Unity.</li>
+<li class=""><strong>Perception Pipeline</strong>: Components for processing sensor data to understand the environment.</li>
+<li class=""><strong>Navigation Pipeline</strong>: Components for path planning and movement control.</li>
+<li class=""><strong>Manipulation Pipeline</strong>: Components for robotic arm/hand control for object interaction.</li>
+<li class=""><strong>LLM (Large Language Model)</strong>: AI model for natural language understanding and generation.</li>
+<li class=""><strong>VLA (Vision-Language-Action)</strong>: Framework integrating visual perception, language understanding, and robotic actions.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="success-criteria-mandatory">Success Criteria <em>(mandatory)</em><a href="#success-criteria-mandatory" class="hash-link" aria-label="Direct link to success-criteria-mandatory" title="Direct link to success-criteria-mandatory" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="measurable-outcomes">Measurable Outcomes<a href="#measurable-outcomes" class="hash-link" aria-label="Direct link to Measurable Outcomes" title="Direct link to Measurable Outcomes" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>SC-001</strong>: Each module contains practical exercises and code examples that are verifiable and runnable.</li>
+<li class=""><strong>SC-002</strong>: The capstone project successfully demonstrates the integration of all learned modules into an autonomous humanoid robot simulation.</li>
+<li class=""><strong>SC-003</strong>: All technical claims are supported by verifiable sources, with at least 50% being peer-reviewed.</li>
+<li class=""><strong>SC-004</strong>: The generated Docusaurus site builds cleanly and is deployable on GitHub Pages.</li>
+<li class=""><strong>SC-005</strong>: The final PDF output includes correctly embedded APA-style citations and a reference list.</li>
+<li class=""><strong>SC-006</strong>: The textbook meets the Flesch-Kincaid grade level of 10-12 and demonstrates zero plagiarism.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/aneeq-ai/Humanoid-Robotics-Textbook/edit/master/my-website/docs/humanoid-robotics-textbook/spec.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#user-scenarios--testing-mandatory" class="table-of-contents__link toc-highlight">User Scenarios &amp; Testing <em>(mandatory)</em></a><ul><li><a href="#module-1---master-ros-2-architecture-priority-p1" class="table-of-contents__link toc-highlight">Module 1 - Master ROS 2 Architecture (Priority: P1)</a></li><li><a href="#module-2---simulate-humanoid-robots-priority-p1" class="table-of-contents__link toc-highlight">Module 2 - Simulate Humanoid Robots (Priority: P1)</a></li><li><a href="#module-3---develop-ai-robot-brain-in-nvidia-isaac-priority-p2" class="table-of-contents__link toc-highlight">Module 3 - Develop AI-Robot Brain in NVIDIA Isaac (Priority: P2)</a></li><li><a href="#module-4---integrate-llms-for-vla-priority-p2" class="table-of-contents__link toc-highlight">Module 4 - Integrate LLMs for VLA (Priority: P2)</a></li><li><a href="#module-5---build-autonomous-simulated-humanoid-priority-p3" class="table-of-contents__link toc-highlight">Module 5 - Build Autonomous Simulated Humanoid (Priority: P3)</a></li><li><a href="#edge-cases" class="table-of-contents__link toc-highlight">Edge Cases</a></li></ul></li><li><a href="#requirements-mandatory" class="table-of-contents__link toc-highlight">Requirements <em>(mandatory)</em></a><ul><li><a href="#functional-requirements" class="table-of-contents__link toc-highlight">Functional Requirements</a></li></ul></li><li><a href="#clarifications" class="table-of-contents__link toc-highlight">Clarifications</a><ul><li><a href="#session-2025-12-05" class="table-of-contents__link toc-highlight">Session 2025-12-05</a></li><li><a href="#key-entities-include-if-feature-involves-data" class="table-of-contents__link toc-highlight">Key Entities <em>(include if feature involves data)</em></a></li></ul></li><li><a href="#success-criteria-mandatory" class="table-of-contents__link toc-highlight">Success Criteria <em>(mandatory)</em></a><ul><li><a href="#measurable-outcomes" class="table-of-contents__link toc-highlight">Measurable Outcomes</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Textbook</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Humanoid-Robotics-Textbook/docs/intro">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Humanoid-Robotics-Textbook/docs/01-ros2">Chapter 01: ROS 2</a></li><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Humanoid-Robotics-Textbook/docs/02-simulation">Chapter 02: Simulation</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Humanoid-Robotics-Textbook/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Aneeq AI. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
