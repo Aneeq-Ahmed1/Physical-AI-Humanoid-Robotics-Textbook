@@ -1,0 +1,15 @@
+# npm Ignore for Docusaurus Project
+node_modules/
+.docusaurus/
+build/
+*.log
+.env*
+
+# Git specific ignores that npm doesn't need to publish
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Code examples directory should not be part of npm package
+code-examples/

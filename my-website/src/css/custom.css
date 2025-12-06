@@ -1,0 +1,166 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Academic/professional color scheme for textbook */
+:root {
+  --ifm-color-primary: #1a365d; /* Deep navy blue */
+  --ifm-color-primary-dark: #152a48;
+  --ifm-color-primary-darker: #12233d;
+  --ifm-color-primary-darkest: #0d1729;
+  --ifm-color-primary-light: #264a73;
+  --ifm-color-primary-lighter: #325e88;
+  --ifm-color-primary-lightest: #4a77a3;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --textbook-accent: #2c5282; /* Medium blue */
+  --textbook-secondary: #5a67d8; /* Indigo */
+  --textbook-neutral: #4a5568; /* Gray */
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4299e1;
+  --ifm-color-primary-dark: #3182ce;
+  --ifm-color-primary-darker: #2b6cb0;
+  --ifm-color-primary-darkest: #2c5698;
+  --ifm-color-primary-light: #63b3ed;
+  --ifm-color-primary-lighter: #90cdf4;
+  --ifm-color-primary-lightest: #bee3f8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Academic styling for homepage */
+.hero--primary {
+  background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: var(--ifm-color-emphasis-0);
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .hero__title {
+  color: var(--ifm-color-primary-light);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button styling for academic look */
+.button--secondary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-primary-darker);
+  border-color: var(--ifm-color-primary-darker);
+  color: white;
+}
+
+.button--primary {
+  background-color: var(--textbook-secondary);
+  border-color: var(--textbook-secondary);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #434190;
+  border-color: #434190;
+  color: white;
+}
+
+.button--outline {
+  background-color: transparent;
+  border: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.button--outline:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+/* Features section styling */
+.features {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+[data-theme='dark'] .features {
+  background-color: var(--ifm-background-color);
+}
+
+.features h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.75rem;
+}
+
+[data-theme='dark'] .features h3 {
+  color: var(--ifm-color-primary-light);
+}
+
+/* Adjust button spacing */
+.margin-right--md {
+  margin-right: 1rem;
+}
+
+.margin-left--md {
+  margin-left: 1rem;
+}
+
+.margin-horiz--md {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .margin-right--md,
+  .margin-left--md,
+  .margin-horiz--md {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Remove cartoon-like styling */
+.features img,
+.features svg {
+  max-height: 120px;
+  margin: 0 auto 1rem;
+}
