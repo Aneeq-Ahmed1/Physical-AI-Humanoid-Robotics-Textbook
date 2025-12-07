@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://aneeq-ahmed1.github.io',
+  url: 'https://Aneeq-Ahmed1.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'aneeq-ahmed1', // Usually your GitHub org/user name.
+  organizationName: 'Aneeq-Ahmed1', // Usually your GitHub org/user name.
   projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // Usually your repo name.
 
   onBrokenLinks: 'ignore',
@@ -50,7 +50,9 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/aneeq-ai/Humanoid-Robotics-Textbook/edit/master/my-website/',
+            // 'https://github.com/aneeq-ai/Humanoid-Robotics-Textbook/edit/master/my-website/',  
+            'https://github.com/Aneeq-Ahmed1/Physical-AI-Humanoid-Robotics-Textbook/edit/master/my-website/',
+
         },
         blog: {
           showReadingTime: true,
