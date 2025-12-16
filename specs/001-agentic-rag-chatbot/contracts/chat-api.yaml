@@ -1,0 +1,209 @@
+openapi: 3.0.0
+info:
+  title: Humanoid Robotics Textbook Chat API
+  description: API for the agentic RAG chatbot embedded in the Humanoid Robotics textbook
+  version: 1.0.0
+servers:
+  - url: https://your-backend-url.onrender.com
+    description: Render deployment server
+
+paths:
+  /chat:
+    post:
+      summary: Main chat endpoint with agentic behavior
+      description: Handles user queries and routes to appropriate tools based on context
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Successful response from the chatbot
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '429':
+          description: Rate limit exceeded
+        '500':
+          description: Internal server error
+      x-internal: false
+
+  /tools/retrieve_book:
+    post:
+      summary: Book content retrieval tool
+      description: Embeds query and searches Qdrant for relevant book content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: The search query to find relevant book content
+                top_k:
+                  type: integer
+                  description: Number of results to return (default 3)
+                  default: 3
+      responses:
+        '200':
+          description: Retrieved documents from the book
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  documents:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/RetrievedDocument'
+        '500':
+          description: Internal server error
+
+  /tools/answer_from_selected:
+    post:
+      summary: Selected text answering tool
+      description: Answers query based only on provided selected text
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                selected_text:
+                  type: string
+                  description: The text selected by the user
+                query:
+                  type: string
+                  description: The user's query about the selected text
+      responses:
+        '200':
+          description: Answer based on selected text only
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The answer generated from selected text
+        '500':
+          description: Internal server error
+
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Check if the service is running
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+
+components:
+  schemas:
+    ChatRequest:
+      type: object
+      required:
+        - query
+      properties:
+        query:
+          type: string
+          description: The user's question or statement
+          example: "Explain the inverse kinematics of humanoid robots"
+        selected_text:
+          type: string
+          description: Text selected by user in the textbook (triggers selected-text mode)
+          example: "Inverse kinematics is the mathematical process of calculating the joint angles needed to position the end effector of a robotic arm at a desired location."
+        session_id:
+          type: string
+          description: Unique identifier for the chat session
+          format: uuid
+          example: "a1b2c3d4-e5f6-7890-1234-567890abcdef"
+
+    ChatResponse:
+      type: object
+      required:
+        - response
+        - session_id
+        - mode
+      properties:
+        response:
+          type: string
+          description: The chatbot's response to the user
+          example: "Inverse kinematics in humanoid robots involves calculating the joint angles needed to achieve a desired position for the end effector..."
+        session_id:
+          type: string
+          description: Unique identifier for the chat session
+          format: uuid
+          example: "a1b2c3d4-e5f6-7890-1234-567890abcdef"
+        mode:
+          type: string
+          description: The mode used to generate the response
+          enum: [full_book_rag, selected_text_only]
+          example: "full_book_rag"
+        citations:
+          type: array
+          description: Sources cited in the response (empty for selected-text mode)
+          items:
+            $ref: '#/components/schemas/Citation'
+        reasoning_trace:
+          type: string
+          description: Internal reasoning for tool selection (for debugging)
+          example: "Selected full_book_rag mode as no text was selected by user"
+
+    RetrievedDocument:
+      type: object
+      properties:
+        text:
+          type: string
+          description: The content of the retrieved document chunk
+          example: "The kinematics of humanoid robots involves complex mathematical models..."
+        source_file:
+          type: string
+          description: The source file where this content was found
+          example: "chapter3/kinematics.md"
+        chunk_index:
+          type: integer
+          description: The index of this chunk in the source file
+          example: 2
+        similarity_score:
+          type: number
+          description: Similarity score from vector search
+          format: float
+          example: 0.85
+
+    Citation:
+      type: object
+      properties:
+        source:
+          type: string
+          description: The source document for this citation
+          example: "chapter3/kinematics.md"
+        chunk_index:
+          type: integer
+          description: The chunk index in the source document
+          example: 2
+        text_preview:
+          type: string
+          description: Preview of the cited text
+          example: "The kinematics of humanoid robots involves complex mathematical models..."
+
+tags:
+  - name: chat
+    description: Main chat functionality
+  - name: tools
+    description: Tool endpoints for the agentic system
+  - name: health
+    description: Health check endpoints
