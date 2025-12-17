@@ -19,7 +19,7 @@ const ChatWidget = () => {
       return `${window.CHATBOT_API_URL}/api`;
     }
     // Fallback to default URL
-    return 'http://localhost:8000/api';
+    return 'https://aaneeq-rag-chatbot.hf.space/api/chat';
   };
 
   const API_BASE_URL = getApiBaseUrl();
