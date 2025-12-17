@@ -76,6 +76,14 @@ const config = {
     ],
   ],
 
+  scripts: [
+    {
+      // Inject the API URL as a global variable before React components load
+      src: `/js/chatbot-config.js`,
+      async: true,
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
