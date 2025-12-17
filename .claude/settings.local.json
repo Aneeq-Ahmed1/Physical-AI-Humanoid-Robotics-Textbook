@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PYTHONPATH=. python tests/integration_test.py)",
+      "Bash(python -c \"import sys; sys.path.append(''.''); from agent.llm_agent import LLMAgent; agent = LLMAgent(); print(''Agent initialized successfully'')\")",
+      "Bash(python -c \"from agent.llm_agent import LLMAgent; agent = LLMAgent(); print(''Agent initialized successfully'')\")",
+      "Bash(dir backendagent)",
+      "Bash(python -c \"import agent.gemini_openai_wrapper; print(''Module imported successfully'')\")",
+      "Bash(pip install -r requirements.txt)",
+      "Bash(python -m pip install -r requirements.txt)",
+      "Bash(python -m pip install openai google-generativeai python-dotenv)",
+      "Bash(python -c \"import google.generativeai as genai; print(''Google Generative AI imported successfully'')\")",
+      "Bash(python -c \"import agent.gemini_openai_wrapper; print(''Gemini wrapper imported successfully'')\")",
+      "Bash(python -c \"import sys; sys.path.insert(0, ''.''); from agent.llm_agent import LLMAgent; agent = LLMAgent(); print(''Agent initialized successfully'')\")",
+      "Bash(timeout 10s python -c \"\nimport uvicorn\nfrom main import app\nprint(''Starting server on http://localhost:8000...'')\n# Don''t actually start the server, just test that imports work\nprint(''All imports successful, server would start properly'')\n\")",
+      "Bash(python -c \"import sys; sys.path.insert(0, ''.''); from vector.qdrant_client import QdrantVectorDB; db = QdrantVectorDB(); print(''QdrantVectorDB initialized successfully'')\")",
+      "Bash(python -c \"\nimport sys\nsys.path.insert(0, ''.'')\n\n# Test importing the main components\nfrom vector.qdrant_client import QdrantVectorDB\nfrom agent.llm_agent import LLMAgent\nfrom api.chat import chat_router  # This will import and initialize all components\nprint(''All backend components imported successfully'')\n\")",
+      "Bash(timeout 3s curl -s http://localhost:8000/health)",
+      "Bash(python -c \"\nimport uvicorn\nfrom main import app\nprint(''Starting server on http://localhost:8000...'')\n# Run with log level to see any issues\nuvicorn.run(app, host=''0.0.0.0'', port=8000, log_level=''info'')\n\")",
+      "Bash(curl -s -X GET http://localhost:8000/docs)",
+      "Bash(python test_gemini_agent.py)",
+      "Bash(python debug_gemini.py)",
+      "Bash(python test_embeddings.py)"
+    ]
+  }
+}

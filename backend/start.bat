@@ -1,0 +1,3 @@
+@echo off
+echo Starting Humanoid Robotics RAG Chatbot Backend...
+python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
