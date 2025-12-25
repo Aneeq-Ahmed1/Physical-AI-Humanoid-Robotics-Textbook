@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLanguage } from '@site/src/contexts/LanguageContext';
 import './ChatWidget.css';
 
 const ChatWidget = () => {
@@ -11,6 +12,9 @@ const ChatWidget = () => {
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
 
+  // Get language context
+  const { language } = useLanguage();
+
   // API endpoint - adjust as needed for your deployment
   // For Docusaurus, we use a simple approach since process.env is not available in browser
   // This can be configured by setting a global variable CHATBOT_API_URL before the script loads
@@ -18,8 +22,11 @@ const ChatWidget = () => {
     if (typeof window !== 'undefined' && window.CHATBOT_API_URL) {
       return `${window.CHATBOT_API_URL}/api`;
     }
-    // Fallback to default URL
-    // return 'https://aaneeq-rag-chatbot.hf.space/api/chat';
+    // Check for REACT_APP_API_URL in browser environment (for builds)
+    if (typeof process !== 'undefined' && process.env && process.env.REACT_APP_API_URL) {
+      return `${process.env.REACT_APP_API_URL}/api`;
+    }
+    // Fallback to local backend during development
     return 'https://aaneeq-rag-chatbot.hf.space/api';
   };
 
@@ -74,6 +81,7 @@ const ChatWidget = () => {
           query: inputValue,
           selected_text: selectedText,
           session_id: sessionId,
+          language: language,  // Pass the current language to backend
         }),
       });
 

@@ -1,8 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import logging
+import sys
+import os
+
+# Add the backend directory to Python path to handle relative imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from api.chat import chat_router
 from api.health import health_router
-import logging
+from api.subagent_endpoints import router as subagent_router
+from api.personalization import router as personalization_router
+from api.translation import router as translation_router
+from agent import initialize_agent_system
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -68,11 +78,17 @@ def check_and_index_documents():
 def startup_event():
     logger.info("Starting up the application...")
     check_and_index_documents()
+    # Initialize the agent system
+    agent_system_info = initialize_agent_system()
+    logger.info(f"Agent system initialized with {len(agent_system_info['skills'])} skills")
     logger.info("Application startup completed")
 
 # Include routers
 app.include_router(chat_router, prefix="/api", tags=["chat"])
 app.include_router(health_router, tags=["health"])
+app.include_router(subagent_router, prefix="/api", tags=["subagents"])
+app.include_router(personalization_router, prefix="/api", tags=["personalization"])
+app.include_router(translation_router, prefix="/api", tags=["translation"])
 
 if __name__ == "__main__":
     import uvicorn

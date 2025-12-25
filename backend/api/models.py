@@ -7,6 +7,7 @@ class ChatRequest(BaseModel):
     query: str
     selected_text: Optional[str] = None
     session_id: Optional[str] = None
+    language: str = "en"  # Default to English
 
 
 class ChatResponse(BaseModel):

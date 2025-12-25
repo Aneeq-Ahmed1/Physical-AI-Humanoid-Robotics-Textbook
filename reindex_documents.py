@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 Script to reindex all documents with the new embedding system
